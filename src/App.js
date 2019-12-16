@@ -1,10 +1,7 @@
 
 import React , {Component} from 'react';
-import FileUpload from './components/FileUpload';
 import Xender from './components/Xender.js/Xender';
-import Xender_Nav from './components/Xender.js/Xender_Nav';
-import Xender_progress_bar from './components/Xender.js/Xender_progress_bar';
-import Select from './components/Xender.js/Select';
+
 import Xender_context from './components/Xender.js/Xender_context';
 
 
