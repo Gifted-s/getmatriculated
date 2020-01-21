@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import schools from '../../schools/News';
+import ScrollAnimation from 'react-animate-on-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook, faArrowCircleRight} from '@fortawesome/free-solid-svg-icons'
 export default class Education extends Component {
@@ -18,6 +19,7 @@ export default class Education extends Component {
     render() {
         return (
            <React.Fragment>
+               
                <div className='row edu'>
                    <div className="col-sm-10 col-md-4 ">
                       <h3>ABOUT US</h3>
@@ -60,12 +62,12 @@ export default class Education extends Component {
                    </div>
 
                    <div className="news col-sm-10 col-md-4">
-                     <h3 className="bg-primary latest">LATEST NEWS</h3>
+                     <h3 className="bblue latest">LATEST NEWS</h3>
                      <h3>UPCOMING EVENTS</h3>
                      {this.state.news.map((school)=>{
                          return(
-                            <div class="media">
-                            <img src={`${school.image}`} style={{height:"40px" , width:"40px"}} class="align-self-center mr-3" alt="..."/>
+                            <div key={school.name} class="media">
+                            <img src={`${school.image}`} style={{height:"40px" , width:"40px"}} className="align-self-center mr-3" alt="..."/>
                             <div class="media-body">
                                 <h5 class="mt-0">{school.name} POST UTME</h5>
                          <p>{school.news}</p>
@@ -93,6 +95,7 @@ export default class Education extends Component {
                             }} icon={faArrowCircleRight} />
                    </div>
                </div>
+              
            </React.Fragment>
         )
     }

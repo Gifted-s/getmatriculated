@@ -1,5 +1,6 @@
 import React, { Component, Suspense} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ScrollAnimation from 'react-animate-on-scroll'
 import { faAddressBook, faSortAlphaDown, faFlask ,faCalculator, faArrowRight, faAtom, faDna, faDollarSign} from '@fortawesome/free-solid-svg-icons'
 import Nav from './Nav';
 import {Spinner} from 'reactstrap';
@@ -14,20 +15,25 @@ export default class Home extends Component {
   
     return (
         <React.Fragment>
-               <div className="container-fluid">
+               {/* <div className="container-fluid">
                <Nav/>
-               </div>
+               </div> */}
                <React.Suspense fallback={<div style={{justifyContent:'center'}}> <Spinner/></div>} >
                   <HomeBack/>
                 </React.Suspense>
                
                   <div className="container">
-                          <Education/>
+                  
+                     <Education/>
+                 
+                   
+                  
+                          
                           <div className="row">
                             <div className="col-sm-12 col-md-12 my-4 grass">
-                            <h5>Click to take weekly practice Exam</h5>
-                            <h4>ARE YOU PREPARED FOR EXAM DAY? PUT YOUR KNOWLEDGE TO TEST</h4>
-                            <span className="btn btn-right btn-light">Join Us</span>
+                            <ScrollAnimation animateIn='fadeIn'><h5>Click to take weekly practice Exam</h5></ScrollAnimation>
+                            <ScrollAnimation animateIn='fadeIn'><h4>ARE YOU PREPARED FOR EXAM DAY? PUT YOUR KNOWLEDGE TO TEST</h4></ScrollAnimation>
+                            <ScrollAnimation animateIn='fadeIn'><span className="btn btn-right btn-light">Join Us</span></ScrollAnimation>
                             </div>
                             
                             
@@ -35,9 +41,9 @@ export default class Home extends Component {
                           </div>
                           <div className="row">
                             <div className="col-sm-12 col-md-12 my-1 feat ">
-                            <h5 className="feature" style={{fontWeight:'bold'}}>FEATURED SUBJECTS</h5>
+                            <ScrollAnimation animateIn='fadeIn'><h5 className="feature" style={{fontWeight:'bold'}}>FEATURED SUBJECTS</h5></ScrollAnimation>
                           
-                            <p>Here are different subjects available to you. You can take any test at your displosal</p>
+                            <ScrollAnimation animateIn='fadeIn'><p>Here are different subjects available to you. You can take any test at your displosal</p></ScrollAnimation>
                           
                         
                             </div>
@@ -45,10 +51,12 @@ export default class Home extends Component {
                             
                           
                           </div>
-                          <div className="row">
-                         
+                          
+                          <ScrollAnimation animateIn='fadeIn'>
+                            <div className="row">
+                          
                          <div className="col-sm-10 col-md-4">
-                            <div style={{alignItems:'center' ,padding:"60px 3px 10px 3px"}} class="card text-center">
+                            <div style={{alignItems:'center' ,padding:"60px 3px 10px 3px"}} className="card text-center">
                                 <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faSortAlphaDown} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">ENGLISH LANGUAGE</h5>
@@ -60,7 +68,7 @@ export default class Home extends Component {
                             </div>
 
                             <div className="col-sm-10 col-md-4">
-                            <div style={{alignItems:'center', padding:"60px 3px 10px 3px"}} class="card text-center">
+                            <div style={{alignItems:'center', padding:"60px 3px 10px 3px"}} className="card text-center">
                                 <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faCalculator} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">MATHEMATICS</h5>
@@ -73,7 +81,7 @@ export default class Home extends Component {
 
 
                             <div className="col-sm-10 col-md-4">
-                            <div style={{alignItems:'center', padding:"60px 3px 10px 3px"}} class="card text-center">
+                            <div style={{alignItems:'center', padding:"60px 3px 10px 3px"}} className="card text-center">
                                 <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faFlask} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">CHEMISTRY</h5>
@@ -84,9 +92,10 @@ export default class Home extends Component {
                                 </div>
                             </div>
 
-
+                       
                             
                           </div>
+                          </ScrollAnimation>
 
 
                           <div className="row">
@@ -104,7 +113,7 @@ export default class Home extends Component {
                             </div>
 
                             <div className="col-sm-10 col-md-4">
-                            <div style={{alignItems:'center', padding:"60px 3px 10px 3px"}} class="card text-center">
+                            <div style={{alignItems:'center', padding:"60px 3px 10px 3px"}} className="card text-center">
                                 <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faDna} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">BIOLOGY</h5>
@@ -117,7 +126,7 @@ export default class Home extends Component {
 
 
                             <div className="col-sm-10 col-md-4">
-                              <div style={{alignItems:'center', padding:"60px 3px 10px 3px"}} class="card text-center">
+                              <div style={{alignItems:'center', padding:"60px 3px 10px 3px"}} className="card text-center">
                                   <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faDollarSign} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">COMMERCE</h5>
@@ -133,15 +142,14 @@ export default class Home extends Component {
                           </div>
 
                           <div className="row">
-                            <div style={{fontWeight:'bold', padding:"10px"}} className="col-md-12 col-sm-12 btn btn-primary">
+                            <div style={{fontWeight:'bold', padding:"10px"}} className="col-md-12 col-sm-12 btn btn-bblue">
                               View More
                             </div>
                           </div>
                           <Tour/>
                           <Contact/>
                   </div>
-                 
-               <Footer/>
+               {/* <Footer/> */}
         </React.Fragment>
     )
   }
