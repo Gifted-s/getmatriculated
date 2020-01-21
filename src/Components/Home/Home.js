@@ -60,7 +60,7 @@ export default class Home extends Component {
                                 <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faSortAlphaDown} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">ENGLISH LANGUAGE</h5>
-                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">English Language,English Language,English Language,English Language,English Language,English Language'</p>
+                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">Questions on Spellings, Vocabulary, Sweet Sixteen Story Book, Registers, Sounds and so on</p>
                                     <FontAwesomeIcon style={{width:"25px",padding:'3px' ,fontWeight:'lighter' ,borderRadius:'50%',border:"2px solid rgb(39, 113, 223)" ,height:"25px" , color:"rgb(39, 113, 223)"}} icon={faArrowRight} />
                                   </div>
                                   
@@ -72,7 +72,7 @@ export default class Home extends Component {
                                 <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faCalculator} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">MATHEMATICS</h5>
-                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">English Language,English Language,English Language,English Language,English Language,English Language'</p>
+                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">Questions on Geometry, Matrix, Calculus, Probability, Trigonometry, Shapes, Statistics and so on </p>
                                     <FontAwesomeIcon style={{width:"25px",padding:'3px' ,fontWeight:'lighter' ,borderRadius:'50%',border:"2px solid rgb(39, 113, 223)" ,height:"25px" , color:"rgb(39, 113, 223)"}} icon={faArrowRight} />
                                   </div>
                                   
@@ -85,7 +85,7 @@ export default class Home extends Component {
                                 <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faFlask} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">CHEMISTRY</h5>
-                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">English Language,English Language,English Language,English Language,English Language,English Language'</p>
+                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">Questions on Gas laws, Stechiometry, Separation techniques, Hydrocarbons, Organic chemistry and so on</p>
                                     <FontAwesomeIcon style={{width:"25px",padding:'3px' ,fontWeight:'lighter' ,borderRadius:'50%',border:"2px solid rgb(39, 113, 223)" ,height:"25px" , color:"rgb(39, 113, 223)"}} icon={faArrowRight} />
                                   </div>
                                   
@@ -105,7 +105,7 @@ export default class Home extends Component {
                                 <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faAtom} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">PHYSICS</h5>
-                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">English Language,English Language,English Language,English Language,English Language,English Language'</p>
+                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">Measurement, Dimensions, Work , Power and Energy, Machines, Projectiles, Pressure, Mecahnics, Waves, Photo electric effects, and so on</p>
                                     <FontAwesomeIcon style={{width:"25px",padding:'3px' ,fontWeight:'lighter' ,borderRadius:'50%',border:"2px solid rgb(39, 113, 223)" ,height:"25px" , color:"rgb(39, 113, 223)"}} icon={faArrowRight} />
                                   </div>
                                   
@@ -117,7 +117,7 @@ export default class Home extends Component {
                                 <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faDna} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">BIOLOGY</h5>
-                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">English Language,English Language,English Language,English Language,English Language,English Language'</p>
+                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">Cells, Organ, Tissue, Systems, Ecology, Revolution, Skeletal System, Flowers, Reproductive Systems, Respiratory Systems and so on</p>
                                     <FontAwesomeIcon style={{width:"25px",padding:'3px' ,fontWeight:'lighter' ,borderRadius:'50%',border:"2px solid rgb(39, 113, 223)" ,height:"25px" , color:"rgb(39, 113, 223)"}} icon={faArrowRight} />
                                   </div>
                                   
@@ -130,7 +130,7 @@ export default class Home extends Component {
                                   <FontAwesomeIcon style={{width:"70px" , height:"70px" , color:"rgb(39, 113, 223)"}} icon={faDollarSign} />
                                   <div className="card-body">
                                     <h5 style={{fontWeight:'bolder' , fontSize:'20px' , opacity:'0.8'}} className="card-title">COMMERCE</h5>
-                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">English Language,English Language,English Language,English Language,English Language,English Language'</p>
+                                    <p style={{ fontSize:'15px' , fontWeight:'normal' ,opacity:'0.7'}} className="card-text">Money, Asset, Capital, Management, Financial Issues, Banking and finance, Record Management, Ledger, Book Keeping, Short Hand, and so on</p>
                                     <FontAwesomeIcon style={{width:"25px",padding:'3px' ,fontWeight:'lighter' ,borderRadius:'50%',border:"2px solid rgb(39, 113, 223)" ,height:"25px" , color:"rgb(39, 113, 223)"}} icon={faArrowRight} />
                                   </div>
                                   

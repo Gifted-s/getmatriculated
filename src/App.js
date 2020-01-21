@@ -10,6 +10,7 @@ import Exam from './Components/Exam/Exam';
 import Testpage from './Components/Exam/Testpage';
 import Dashboard from './Components/Dashboard/Dashboard';
 import  GlobalContext  from './Components/Globacontext/GlobalContext';
+import ContactPage from './Components/Home/ContactPage';
 const Home= React.lazy(()=>import('./Components/Home/Home'));
 
 // import AsyncComponent from './Components/AsyncComponent/AsyncComponent'
@@ -54,6 +55,8 @@ export default class App extends Component {
           <Route path='/dashboard' component={Dashboard}/>
            {/*  Mock Exam page , , the user must be logged in to access this */}
           <Route path='/test' component={Testpage}/>
+          <Route path='/contact' component={ContactPage}/>
+          
           </Switch>
          <Footer/>
          </GlobalContext>

@@ -12,6 +12,9 @@ const Nav = (props) => {
     function news(){
         setActive('news')
     }
+    function contact(){
+        setActive('contact')
+    }
     function practice(){
         setActive('practice')
     }
@@ -31,6 +34,7 @@ const Nav = (props) => {
                 <a  href="/" onClick={()=>home()} className={active==="home"?"nav-item nav-link active":"nav-item nav-link"}>HOME</a>
                 <Link onClick={()=>about()} className={active==="about"?" nav-item nav-link active":"nav-item nav-link"} to="/about">ABOUT US</Link>
                 <Link to="/news" onClick={()=>news()} className={active==="news"?"nav-item nav-link active":"nav-item nav-link"}>NEWS</Link>
+                <Link to="/contact" onClick={()=>contact()} className={active==="contact"?"nav-item nav-link active":"nav-item nav-link"}>CONTACT</Link>
                 <Link to="/exam" onClick={()=>practice()} className={active==="practice"?"nav-item nav-link active":"nav-item nav-link"} >PRACTICE NOW</Link>
                 <Link to="/login" onClick={()=>login()} className={active==="login"?"nav-item nav-link active":"nav-item nav-link"}><span className="mock">
                     MOCK
