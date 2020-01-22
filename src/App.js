@@ -26,7 +26,7 @@ export default class App extends Component {
         <div style={{marginTop:'260px'}} className="row">
           <div className=" mx-auto  col-md-2 col-sm-2">
           
-            <Spinner/>
+            <Spinner className="spin"/>
            
           
         </div>

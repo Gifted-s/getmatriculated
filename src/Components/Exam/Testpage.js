@@ -64,11 +64,18 @@ export default class Testpage extends Component {
                       
                      
                      {this.state.showModal &&
-                      <div style={{backgroundColor:'white', height:'50vh', marginTop:'120px'}}  className=" col-md-8 col-sm-10 mx-auto">
+                      <div style={{backgroundColor:'white',marginTop:'120px' ,height:'50vh', marginTop:'120px'}}  className=" col-md-8 col-sm-10 mx-auto">
                       <h3 className="text-center text-secondary">Are your sure?</h3>
                       <div style={{marginLeft:'210px'}} className='finish_cont my-4'>
                       <button onClick={()=>{
-                          console.log(this.state.userOptions)
+                          var score=0
+                          for(var i=0;i< this.state.questions.length; i++){
+                            if(this.state.questions[i].answer=== this.state.userOptions[i]){
+                              score++
+                            }
+                          }
+                          alert(`Your score is ${score}`)
+                          
                           this.setState({finish:true})
                           }} className="finish_ btn btn-primary">
                       Yes, I want to submit    

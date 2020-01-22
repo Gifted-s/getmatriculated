@@ -919,6 +919,12 @@ input.option[type="radio"]:checked{
     .www{
         margin-top:140px
     }
+    .spin{
+        color:'royalblue';
+        top:-200px;
+        left:0;
+        position: absolute;
+    }
     .finish_cont{
      
      margin-left: -300px;
