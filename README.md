@@ -1,4 +1,4 @@
-# GetMatriculated [getmatriculated.com](https://getmatriculated).
+# GetMatriculated [getmatriculated.com](https://getmatriculated.com).
 
  ReactJS Devloper: Adewumi Sunkanmi
 
