@@ -17,9 +17,9 @@ export default class Login extends PureComponent {
             
           </div>
 
-          <div className="container">
-          <div className="row">
-               <div className="col-md-12 my-4  col-sm-12">
+          <div className="one__ container">
+          <div className="w row">
+               <div className=" col-md-12 my-4  col-sm-12">
                  <Tour/>
                </div>
              </div>

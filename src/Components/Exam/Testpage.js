@@ -20,6 +20,7 @@ export default class Testpage extends Component {
             displayModal:false,
             seconds:0,
             minute:10,
+            score:0,
             checked1:false,
             checked2:false,
             checked3:false,
@@ -67,19 +68,83 @@ export default class Testpage extends Component {
                       <div style={{backgroundColor:'white',marginTop:'120px' ,height:'50vh', marginTop:'120px'}}  className=" col-md-8 col-sm-10 mx-auto">
                       <h3 className="text-center text-secondary">Are your sure?</h3>
                       <div style={{marginLeft:'210px'}} className='finish_cont my-4'>
-                      <button onClick={()=>{
-                          var score=0
-                          for(var i=0;i< this.state.questions.length; i++){
-                            if(this.state.questions[i].answer=== this.state.userOptions[i]){
-                              score++
-                            }
-                          }
-                          alert(`Your score is ${score}`)
-                          
-                          this.setState({finish:true})
-                          }} className="finish_ btn btn-primary">
-                      Yes, I want to submit    
-                      </button>
+                     
+
+
+
+                      {/* onClick={()=>{
+                var score=0
+                for(var i=0;i< this.state.questions.length; i++){
+                if(this.state.questions[i].answer=== this.state.userOptions[i]){
+                    score++
+                }
+                }
+                
+                
+                this.setState({finish:true})
+                }} */}
+
+                     
+
+<button
+
+onClick={()=>{
+    var score=0
+    for(var i=0;i< this.state.questions.length; i++){
+    if(this.state.questions[i].answer=== this.state.userOptions[i]){
+        score++
+    }
+    this.setState({score})
+    }
+    
+    
+    // this.setState({finish:true})
+    }} 
+ type="button" className="btn btn-primary finish_" data-toggle="modal" data-target="#exampleModal">
+  Yes, I want to submit
+</button>
+
+
+<div className=" modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className=" modal-dialog" role="document">
+    <div className="modal-content bg-primary ">
+      <div className="modal-header">
+        <h3 className="modal-title text-light" id="exampleModalLabel">Your score is</h3>
+        <button type="button" className="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1 style={{textAlign:'center', fontWeight:'bold'}} className="text-light ">
+            {this.state.score}
+        </h1>
+
+        <h4 style={{paddingBottom:'6px'}} className="text-light">
+             Anticipate for the next topic
+        </h4>
+        <h6 className="text-light">Check back later</h6>
+      </div>
+      <div class="modal-footer">
+       
+        <button onClick={()=>this.setState({finish:true})} type="button" class="btn btn-success" data-dismiss="modal" aria-label="Close">
+            View answer to questions</button>
+      </div>
+    </div>
+  </div>
+</div>           
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                    
 
                       <button onClick={()=>{
                       document.getElementById('q_c').style.display='block';
@@ -96,16 +161,10 @@ export default class Testpage extends Component {
                      }
                     
                     <div id='q_c' className="test row">
-                    
-                    {selectedCourses.map((subject)=>{
-                                   return(
-                                       
-                                    <h5 key={subject} className="btn text-primary btn-primary bg-transparent ">
-                                    {subject}
+                                    <h5 style={{padding:'5px'}} key={selectedCourses[0]} className="btn text-primary btn-primary bg-transparent ">
+                                    {selectedCourses}
                                      </h5>
-                                   )
-                                  
-                               })}
+                   
                         <div className=" bg-primary text-top col-md-12 col-sm-12">
                               
                                
@@ -114,11 +173,11 @@ export default class Testpage extends Component {
                                 
                                 <li>
                                   <span className="time">Time:</span>  
-                                  10:00 Min
+                                  <span className="sus">10:00 Min</span>
                                 </li>
                                 <li>
                                 <span className="time_left">Time Left:</span>  
-                            {this.state.minute} Min: {this.state.seconds}s
+                                <span className="sus2">{this.state.minute} Min: {this.state.seconds}s</span>
                                 </li>
  
                              </ul>
@@ -130,7 +189,7 @@ export default class Testpage extends Component {
                     <div className=" q_ col-md-12 col-sm-12">
                         <h6 className="question-header font-weight-bold" style={{marginTop:'-23px'}}>QUESTION ({this.state.index+1})</h6>
                         <div className="q_inner col-md-12 col-sm-12">
-                            <p style={{fontWeight:'bold',fontStyle:'italic',fontSize:'16px',paddingBottom:'15px', paddingTop:'15px', color:'rgba(0,0,0,0.5)'}}>Read the Question carefully before you choose you answer</p>
+                            <p className="ac" style={{fontWeight:'bold',fontStyle:'italic',fontSize:'16px', color:'rgba(0,0,0,0.5)'}}>Read the Question carefully before you choose you answer</p>
                              <p style={{fontWeight:'bold',fontSize:'16px', color:'rgba(0,0,0,0.6)'}}>
                                 {this.state.questions[this.state.index].q}
                              </p>
@@ -209,14 +268,14 @@ export default class Testpage extends Component {
                         </div>
                  <div id="q_cis" className="q_selector col-md-12 col-sm-12">
                   
-                     <div onClick={()=>{
+                     <div className='pre' onClick={()=>{
                          this.setState({current:this.state.current === 1?1:this.state.current-1})
                          if(this.state.current=== 1){
                             this.setState({index:0})
                         }
                          this.setState((prevState)=>{
                          return {index:prevState.index ===0 ? 0: prevState.index-1}
-                     })}} style={{marginTop:'13px',padding:'3px 26px',fontSize:'13px' ,color:'rgb(39, 113, 223)'}} className=" btn btn-primary bg-transparent">
+                     })}} style={{marginTop:'13px',padding:'3px 8px',fontSize:'13px' ,color:'rgb(39, 113, 223)'}} className="pre btn btn-primary bg-transparent">
                            <span style={{position:"relative", top:'-2px'}}>PREVIOUS</span>
                       
                        <FontAwesomeIcon style={{
@@ -279,7 +338,7 @@ export default class Testpage extends Component {
                                 // }
                             
                                 
-                         }} style={{marginTop:'12px',padding:'3px 26px',fontSize:'13px' ,color:'rgb(39, 113, 223)'}} className=" btn btn-primary bg-transparent">
+                         }} style={{marginTop:'12px',padding:'3px 8px',fontSize:'13px' ,color:'rgb(39, 113, 223)'}} className=" btn btn-primary bg-transparent">
                            <span style={{position:"relative", top:'-4px'}}>NEXT</span>
                       
                        <FontAwesomeIcon style={{
@@ -299,7 +358,7 @@ export default class Testpage extends Component {
                       document.getElementById('q_cis').style.display='none';
                        this.setState({showModal:true})}
                        
-                       } style={{marginTop:'12px',padding:'3px 26px',fontSize:'13px', float:'right' ,color:'rgb(39, 113, 223)'}} className="submit_ btn btn-primary bg-transparent">
+                       } style={{marginTop:'12px',padding:'3px 8px',fontSize:'13px', float:'right' ,color:'rgb(39, 113, 223)'}} className="submit_ btn btn-primary bg-transparent">
                            <span style={{position:"relative", top:'-2px'}}>SUBMIT</span>
                       
                        <FontAwesomeIcon style={{

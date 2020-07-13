@@ -11,6 +11,9 @@ import Testpage from './Components/Exam/Testpage';
 import Dashboard from './Components/Dashboard/Dashboard';
 import  GlobalContext  from './Components/Globacontext/GlobalContext';
 import ContactPage from './Components/Home/ContactPage';
+import Buy from './Components/Buy/Buy';
+import Sales from './Components/Sales/Sales';
+import ScollTop from './Components/Home/ScollTop'
 const Home= React.lazy(()=>import('./Components/Home/Home'));
 
 // import AsyncComponent from './Components/AsyncComponent/AsyncComponent'
@@ -35,6 +38,7 @@ export default class App extends Component {
         }>
           <BrowserRouter>
           <GlobalContext>
+            <ScollTop>
           <div className="container-fluid">
           <Nav/>
           </div>
@@ -47,6 +51,7 @@ export default class App extends Component {
           <Route path='/about' component={About}/>
            {/*  News page */}
           <Route path='/news' component={News}/>
+          <Route path='/utmeapp' component={Sales}/>
            {/*  Login page */}
           <Route path='/login' component={Login}/>
            {/* Practice Exam page */}
@@ -55,10 +60,12 @@ export default class App extends Component {
           <Route path='/dashboard' component={Dashboard}/>
            {/*  Mock Exam page , , the user must be logged in to access this */}
           <Route path='/test' component={Testpage}/>
+          <Route path='/buy' component={Buy}/>
           <Route path='/contact' component={ContactPage}/>
           
           </Switch>
          <Footer/>
+         </ScollTop>
          </GlobalContext>
           </BrowserRouter>
          

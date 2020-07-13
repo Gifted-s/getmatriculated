@@ -3,6 +3,9 @@ import ExamBack from './ExamBack'
 import ExamContext from './ExamContext';
 export default class Exam extends Component {
     
+    componentDidMount(){
+        document.getElementById('footer').style.display='none';
+    }
 
     render() {
         return (
@@ -11,10 +14,16 @@ export default class Exam extends Component {
            
             <div className="container-fluid">
                   <ExamBack/>
+
               </div>
             
             </React.Fragment>
             </ExamContext>
         )
     }
+    componentWillUnmount(){
+        document.getElementById('footer').style.display='block';
+    }
 }
+
+

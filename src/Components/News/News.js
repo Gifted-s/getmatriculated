@@ -186,23 +186,29 @@ export default class News extends Component {
             <React.Fragment>
     <div className="row">
                    
-                   <div  className="select  offset-md-1 col-md-10 col-sm-10">
-                   <select onChange={(e)=>this.setState({selected:e.target.value})} style={{color:'rgb(0,0,0,0.6)'}}  className=" btn bg-transparent   custom-select btn-primary">
+                   <div  className="select  offset-md-3 col-md-6 col-sm-10">
+                   {/* <select onChange={(e)=>this.setState({selected:e.target.value})} style={{color:'rgb(0,0,0,0.6)'}}  className=" btn bg-transparent   custom-select btn-primary">
                    {this.state.schools.map((school)=>{
                        return(
                        <option key={school.name} value={school.name}>{school.name}</option>
                        )
                    })}    
-                   </select>
-       
-       
-                  
+                   </select> */}
+                           <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action">
+    Cras justo odio
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in <span className="btn btn-primary">Read</span></a>
+  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+</div>
                    </div>
                  </div>
        
             
        
-               <div className="row">
+               {/* <div className="row">
                    <div className="btn__ offset-md-5 col-md-3 col-sm-12">
                   
                    <div className="btn-group ">
@@ -221,7 +227,7 @@ export default class News extends Component {
                       </div>
                    </div>
                    </div>
-               </div>
+               </div> */}
             </React.Fragment>
             
         )
@@ -230,35 +236,16 @@ export default class News extends Component {
         return (
             <React.Fragment>
                  <div className="container about">
-                <div className="tour row">
-                    <div  className="  news_image col-sm-12 col-md-6">
-                      
-                      <img src={require('./news.jpg')} className="img-fluid img_" alt="loading...."/>
-                    </div>
-                    <div  className=" about_right abb col-sm-12 col-md-6">
-                    {/* <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;d like to wish you a Merry Christmas.<br/><br/>May the beauty of this season fill your life with love and joy. 🎄🎅🎁<br/><br/>From all of us at Andela Nigeria. 💙<a href="https://twitter.com/hashtag/ThisIsAndela?src=hash&amp;ref_src=twsrc%5Etfw">#ThisIsAndela</a> <a href="https://twitter.com/hashtag/MerryChristmas?src=hash&amp;ref_src=twsrc%5Etfw">#MerryChristmas</a> <a href="https://twitter.com/hashtag/Christmas?src=hash&amp;ref_src=twsrc%5Etfw">#Christmas</a> <a href="https://t.co/gOH9JpQ1hd">pic.twitter.com/gOH9JpQ1hd</a></p>&mdash; Andela Nigeria (@Andela_Nigeria) <a href="https://twitter.com/Andela_Nigeria/status/1209731604718985217?ref_src=twsrc%5Etfw">December 25, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}
-                    <ScrollAnimation animateIn='fadeIn'><h3 style={{color:'rgb(0,0,0,,0.7)'}}>Join the matriculated Students<br/> for this year </h3></ScrollAnimation>
-                      
-                    <ScrollAnimation animateIn='fadeIn'>
-                      <p style={{paddingLeft:'0', border:'none' , marginTop:'50px'}} className="about_text">
-                        We provide you with the best solution to questions<br/> and keep you
-                        informed on information regarding<br/> the institution of your choice<br/>
-                        We are here to get you matriculated
-
-                      </p>
-                </ScrollAnimation>
-                     
-                    </div>
-
-                   
-                </div>
                
                 {!this.state.news?
                 <this.Selection/>
                 :
                 <this.News/>
                 }
+                <div className="ww">
                 <Tour/>
+                </div>
+               
                 </div>
             </React.Fragment>
         )

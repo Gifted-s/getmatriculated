@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {} from '@fortawesome/free-solid-svg-icons'
+import {} from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 
 export default class Footer extends Component {
     render() {
@@ -9,26 +10,21 @@ export default class Footer extends Component {
                 <div id="footer">
                 <ul style={{color:"white" }} className=" foot  nav navbar-dark bg-dark justify-content-center">
                     <li  className="nav-item">
-                        <a className="nav-link " href="/">Home</a>
+                        <Link className="nav-link " to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/about">About us</a>
+                        <Link className="nav-link" to="/buy">Buy</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/news">News</a>
+                        <Link className="nav-link" to="/utmeapp">Products</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/exam" >Practice Now</a>
+                        <Link className="nav-link" to="/exam" >Practice Now</Link>
                     </li>
                     <li  className="nav-item">
-                        <a className="nav-link " href="/news">Opportunities</a>
+                        <Link className="nav-link " to="/contact">Contact Us</Link>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="about">Our Team</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/about">Contact Us</a>
-                    </li>
+                  
                     </ul>
 
 
@@ -37,28 +33,30 @@ export default class Footer extends Component {
                     <div className="row">
                         <div className="col-md-4 col-sm-12">
                             <h5 style={{fontWeight:'bold'}}>GetMatriculated</h5>
-                            <p style={{marginTop:'20px'}}><a href="#">Home</a></p>
-                            <p> <a href="/about">About Us</a></p>
-                            <p><a href="/news">News</a></p>
-                            <p><a href="/exam">Practice Now</a></p>
+                            <p style={{marginTop:'20px'}}><Link  to="/">Home</Link></p>
+                            <p> <Link to="/buy">Buy</Link></p>
+                            <p> <Link to="/contact">Contact Us</Link></p>
+
+                            <p><Link to="/utmeapp">Products</Link></p>
+                            <p><Link to="/exam">Practice Test</Link></p>
 
                         </div>
                         <div className="col-md-4 col-sm-12">
                         <h5 style={{fontWeight:'bold'}}>Our Products</h5>
-                            <p style={{marginTop:'20px'}}><a href="#">Learning Management System</a></p>
-                            <p> <a href="/about">GetMatriculated</a></p>
+                            <p style={{marginTop:'20px'}}><Link to="/utmeapp">GetMatriculated UTME</Link></p>
+                            {/* <p> <a href="/about">GetMatriculated</a></p>
                             <p><a href="#">Get Insights</a></p>
                             <p><a href="#">Learning Portals</a></p>
-                            <p><a href="#">Forum</a></p>
+                            <p><a href="#">Forum</a></p> */}
 
                         </div>
                         <div className="col-md-4 col-sm-12">
                         <h5 style={{fontWeight:'bold'}}>Contact Us</h5>
-                            <p style={{marginTop:'20px'}}><a href="#">Knowledge Center</a></p>
-                            <p> <a href="#">Contact</a></p>
-                            <p><a href="#">Terms</a></p>
-                            <p><a href="#">Private policy</a></p>
-                            <p><a href="#">Mail</a></p>
+                           
+                            <p style={{marginTop:'20px'}}> <Link to="contact">Contact</Link></p>
+                            {/* <p><a href="#">Terms</a></p>
+                            <p><a href="#">Private policy</a></p> */}
+                            <p><Link to="/contact">Mail</Link></p>
                             
                         </div>
                     </div>

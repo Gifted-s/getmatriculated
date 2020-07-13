@@ -20,7 +20,6 @@ export default class ExamBack extends Component {
             return res.json()
         })  
         .then(resJSON=>{
-           
             this.setState({data:resJSON.questions})
             const arr=[]
             for(const i in resJSON.questions){

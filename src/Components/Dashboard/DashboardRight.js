@@ -31,7 +31,7 @@ class DashboardRight extends Component {
             <React.Fragment>
                 <div className="col-12">
 
-                 <div className="dashboard_cover"></div> 
+                 <div style={{backgroundColor:`${amount>=200?'transparent': 'white'}`}} className="dashboard_cover"></div> 
                 <FontAwesomeIcon  onClick={()=>this.props.open()} className='menu__' icon={faEllipsisV}/>
                     <div className="dash_head">
                    

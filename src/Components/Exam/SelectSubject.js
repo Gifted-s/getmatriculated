@@ -14,8 +14,8 @@ export default class SelectSubject extends Component {
     }
     increment= (subject, setSubject)=>{
        
-        if(this.state.max===4){
-           alert('maximum number of subject is selected the first four subjects will be selected');
+        if(this.state.max>1){
+           alert('You can only select one topic');
            
            setSubject(this.state.subject_selected);
            this.setState({isSubjectSelected:true});
@@ -40,11 +40,11 @@ export default class SelectSubject extends Component {
                                 <div className="col-12 align-item-center exam_back" >
                                 {!this.state.isSubjectSelected?
                                   <React.Fragment>
-                                     <h1>PRACTICE EXAM QUESTIONS</h1>
+                                     <h1 style={{fontWeight:'bolder'}}>PRACTICE EXAM QUESTIONS</h1>
             
                                      <div className="col-md-4 offset-md-4 my-4  col-sm-10">
-                                         <div   className="subjectSelect ">
-                                           <span className="selecte"><h5 style={{display:'inline'}}>Select subjects (max of 4)</h5>) </span> <span className='dropdown-toggle'></span> 
+                                         {/* <div   className="subjectSelect ">
+                                           <span className="selecte"><h5 style={{display:'inline'}}>Select subject (max of 1)</h5>) </span> <span className='dropdown-toggle'></span> 
                                          </div>
 
                                          <div className="dropdown_body">
@@ -82,32 +82,51 @@ export default class SelectSubject extends Component {
                                            </p> 
 
                                         
-                                         </div>
-                                         <div onClick={()=>{
-                                             if(this.state.max!==4){
-                                                 return alert('please select four subject')
+                                         </div> */}
+                                         {/* <div onClick={()=>{
+                                             if(this.state.max>1){
+                                                 return alert('You can only take a subject at a time')
                                              }
                                              setSubject(this.state.subject_selected);
                                              this.setState({isSubjectSelected:true});
                                          }} className="btn d-block my-2 btn-primary">
                                              Proceed
-                                         </div>
-                                     {/* <select onChange={(e)=>{
+                                         </div> */}
+                                    
+
+
+                                        <select  onChange={(e)=>{
                                          setSubject(e.target.value);
                                          this.setState({isSubjectSelected:true})
-                                     }}  style={{color:'rgb(0,0,0,0.6)' , border:'none'}}   className="custom-select">
+                                     }}  style={{color:'rgb(0,0,0,0.6)' , border:'none'}} id="disabledSelect" className="custome form-control">
                                         
-                                        <option  value='English'>English</option> 
+                                            
+
+
+                                        
+                                        <option  value='English' style={{display:'none'}}>Select Subject</option> 
+                                        <option  value='English'> Use Of English</option>
                                         <option  value='Mathematics'>Mathematics</option> 
-                                        <option  value='Biology'>Biology</option> 
                                         <option  value='Chemistry'>Chemistry</option> 
+                                        <option  value='CRS'>CRS</option> 
+                                        <option  value='Biology'>Biology</option> 
+                                        <option  value='Economics'>Economics</option> 
+                                        <option  value='Financial accounting'>Financial accounting</option> 
+                                        <option  value='Geography'>Geography</option> 
+                                        <option  value='Literature in English'>Literature in English</option> 
                                         <option  value='Physics'>Physics</option> 
                                         <option  value='Commerce'>Commerce</option> 
-                                        <option  value='Government'>Government</option> 
-                                        <option  value='Geography'>Geography</option> 
+                                        <option  value='Agricultural Science'>Agricultural Science</option>
+                                        <option  value='PGovernment'>Government</option> 
+                                        <option  value='Music'>Music</option> 
+                                        <option  value='French'>French</option>
+                                        <option  value='Igbo'>Igbo</option>
+                                        <option  value='Art'>Art</option> 
+                                        <option  value='Yoruba'>Yoruba</option>  
+                                        
                  
                                       
-                                    </select> */}
+                                    </select>
                                      
                                      </div>
                                      </React.Fragment>
@@ -118,14 +137,7 @@ export default class SelectSubject extends Component {
                                 
                                
                                 </div>
-                                <div className="my-3 container">
-                             <div className="www row">
-                                 <div  className=" col-md-12 col-sm-12 offset-md-0">
-                                 <Tour/>
-                                 </div>
-                             </div>
-      
-                         </div>
+                              
                              </div>
                            
                             )

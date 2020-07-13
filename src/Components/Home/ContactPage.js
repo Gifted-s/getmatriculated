@@ -9,40 +9,81 @@ export default class ContactPage extends Component {
     render() {
         return (
            <React.Fragment>
-               <div style={{marginTop:'100px'}} className="container">
+               <div style={{marginTop:'100px', padding:'0 20px'}} className="container">
                    <div className="row">
                     <div className="col-md-6 col-sm-12">
-                    <h3 className="my-3 mx-auto" style={{fontWeight:'bold'}}>Contact Us Today</h3>
-                    <h6 className="my-4  mx-auto">Gmail <FontAwesomeIcon style={{color:'rgba(0,0,0,0.6)', marginLeft:'10px'}} icon={faMailBulk}/>: getmatriculated@gmail.com</h6>
-                    <h6 className="my-4  mx-auto">Phone <FontAwesomeIcon  style={{color:'rgba(0,0,0,0.6)', marginLeft:'10px'}} icon={faPhoneAlt}/>:  07031850081</h6>
-                    <h6 className="my-4 mx-auto">Instagram :@getmatriculated</h6>
-                    <h6 className="my-4  mx-auto">Twitter :@get-matriculated</h6>
-                    <h4>You can also message us</h4>
                     
                     
-                    <form>
-                <div className="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input style={{border:'1px solid rgba(0,0,0,0.2)', marginTop:'-10px'}} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                  
-                </div>
-                <div className="form-group">
-                    <label for="exampleInputPassword1">Full name</label>
-                    <input style={{border:'1px solid rgba(0,0,0,0.2)', marginTop:'-10px'}} type="text" className="form-control" id="exampleInputPassword1"/>
-                </div>
-                <div className="form-group">
-                    <label for="exampleInputPassword1">Phone Number</label>
-                    <input style={{border:'1px solid rgba(0,0,0,0.2)', marginTop:'-10px'}} type="number" className="form-control" id="exampleInputPassword1"/>
-                </div>
-                 <div className="form-group">
-                    <label for="exampleInputPassword1">Text</label>
-                    <input style={{border:'1px solid rgba(0,0,0,0.2)', marginTop:'-10px'}} type="text" className="form-control" id="exampleInputPassword1"/>
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
+                    <form className="border-primary p-4">
+                        <div style={{borderRadius:'0'}} className='alert alert-secondary d-block'>
+                            <h4 className="text-primary font-weight-bold">
+                                Contact Us
+                            </h4>
+                        </div>
+                    <div className="form-group">
+                        <label className="text-primary" for="exampleInputEmail1">Full Name</label>
+                        <input  type="text" className="cf form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    
                     </div>
-                    <div  className="col-md-6 my-4 col-sm-12">
-                     <img src={require('./Getmatriculated.png')} className='img-fluid' alt="getmatriculated"/>
+                    <div className="form-group">
+                        <label className="text-primary" for="exampleInputEmail1">Email address</label>
+                        <input  type="email" className="cf form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    
+                    </div>
+                    <div className="form-group">
+                        <label className="text-primary" for="exampleInputEmail1">Phone Number</label>
+                        <input  type="telephone" className="cf form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    
+                    </div>
+                    <div className="form-group">
+                        <label className="text-primary" for="exampleInputEmail1">Inquiry</label>
+                        <input  type="text" className="cf form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    
+                    </div>
+                    <div class="form-group">
+                        <label className="text-primary" for="exampleFormControlTextarea1">Message</label>
+                        <textarea className="form-control border-primary" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                   
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    </div>
+                    <div className=" col-md-6 my-4 col-sm-10">
+                     <h4 className="text-secondary">
+                        <a href='
+https://m.facebook.com/getmatriculated/' className="text-primary">
+                      Facebook
+                        </a>
+                     </h4>
+                     <h4 className="text-secondary">
+                        <a href='
+
+https://mobile.twitter.com/getmatriculated' className="text-primary">
+                      Twitter
+                        </a>
+                     </h4>
+                     <h4 className="text-primary">
+                          Telephone : 09070930560, 07064196590
+
+                     </h4>
+
+                    
+                     <h4 className="text-secondary">
+                        <a href='
+
+https://chat.whatsapp.com/Ik0sHWTCt8sKWgiCiW07w0' className="text-primary">
+                      Whatsapp
+                        </a>
+                     </h4>
+
+
+                     <h4 className="text-secondary">
+                        <a href='
+https://m.facebook.com/groups/605769713324813?group_view_referrer=profile_browser&_rdc=1&_rdr' className="text-primary">
+                      
+Facebook community link
+                        </a>
+                     </h4>
                     </div>
                     
                    </div>

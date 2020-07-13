@@ -15,7 +15,7 @@ export default class About extends Component {
                 <div className="tour row">
                     <div  className="v about_left col-sm-12 col-md-6">
                       
-                      <img src={require('./about.jpg')} className="img-fluid" alt="loading____"></img>
+                      <img src={require('../../Images/about1.png')} className="img-fluid" alt="loading____"></img>
                     </div>
                     <div className=" about_right col-sm-12 col-md-6">
                     <h5>INTRODUCTION</h5>

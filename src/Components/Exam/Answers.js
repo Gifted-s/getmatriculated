@@ -4,7 +4,7 @@ const Answers = (props) => {
     return (
        <React.Fragment>
            <div className="row">
-               <div style={{backgroundColor:'white',boxShadow:'0 0 8px 0 rgba(0,0,0,0.2)', borderRadius:'10px', marginTop:'120px'}} className="col-md-8 col-sm-10 mx-auto">
+               <div style={{backgroundColor:'white', borderRadius:'10px', marginTop:'120px'}} className="col-md-8 col-sm-10 mx-auto">
                    <div className="list-group ">
                        <h4 className="text-center my-3 text-primary">Answers</h4>
                      { 
