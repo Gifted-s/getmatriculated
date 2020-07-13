@@ -1,6 +1,6 @@
-# GetMatriculated
-[getmatriculated.com](https://getmatriculated).
-ReactJS Devloper: Adewumi Sunkanmi
+# GetMatriculated [getmatriculated.com](https://getmatriculated).
+
+ ReactJS Devloper: Adewumi Sunkanmi
 
 
 GetMatriculated is a platform that allows students get news about the university they aspire and also allows them practice mock examination relevant to course they which to study at the university and polytechnics
