@@ -3,7 +3,7 @@
  ReactJS Devloper: Adewumi Sunkanmi
 
 
-GetMatriculated is a platform that allows students get news about the university they aspire and also allows them practice mock examination relevant to course they which to study at the university and polytechnics
+GetMatriculated is a platform that allows students get admission to the university of their choice by supplying relevant  news about the university they aspire and also allow them practice mock examination relevant to the course they which to study at the university , polytechnic or college
 
 
 ## Available Scripts
